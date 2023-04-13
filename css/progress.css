@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap');
+
+body {
+    font-family: 'Raleway', sans-serif;
+    color: white;
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    overflow: hidden;
+    background-color: #cbcbcb;
+}
+
+
+.button {
+    border-radius: 25px;
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    width: 50px;
+    height: 50px;
+    background-color: #FF0054;
+    color: white;
+    border: 0;
+}
+
+:root {
+    --magenta: #FF0054;
+    --orange: #F58A07;
+}
+
+.container {
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    width: 350px;
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.progress-container::before {
+    content: "";
+    background-color: #dbdbdb;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+}
+
+.progress {
+    position: absolute;
+    background-color: var(--orange);
+    top: 50%;
+    height: 4px;
+    width: 0%;
+    left: 0;
+    z-index: -1;
+    transform: translateY(-50%);
+    transition: width 0.7s ease;
+}
+
+.circle {
+    font-size: 25px;
+    background-color: #cbcbcb;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2.5px solid #dbdbdb;
+}
+
+.circle.active {
+    border-color: var(--orange);
+    transition: .7s ease;
+}
+
+.btn {
+    background-color: var(--magenta);
+    color: white;
+    border: none;
+    border-radius: 10px;
+    padding: 8px 30px;
+    margin: 5px;
+    font-size: 14px;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.btn:active {
+    transform: scale(.98);
+}
+
+.btn:disabled {
+    background-color: #dbdbdb;
+    cursor: not-allowed;
+}
+
+
